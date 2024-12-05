@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Layout from '@/components/layout/layout';
 import Home from '@/pages/Home';
 
 type Props = {};
