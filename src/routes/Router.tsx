@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Home from '@/pages/Home';
+import Layout from '@/layout/Layout';
+import { routes } from '@/routes/Routes';
 
 type Props = {};
 
@@ -7,9 +8,10 @@ const AppRouter = (props: Props) => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          {/* <Route path="about" element={} /> */}
+        <Route path="/" element={<Layout sidebarType="Sidebar1" />}>
+          {routes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
         </Route>
       </Routes>
     </Router>

@@ -1,13 +1,8 @@
 import { Outlet } from 'react-router-dom';
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 
 
-type LayoutProps = {
-  
-};
-
-const Layout = ( props : LayoutProps) => {
-  
-
+const Layout = () => {
 
   return (
     <div>
